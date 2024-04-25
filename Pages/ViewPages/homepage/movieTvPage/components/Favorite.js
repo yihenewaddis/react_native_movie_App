@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Text, View, Pressable } from "react-native";
 import useFavoriteWatch from "../../../viewPagecustomehook/useFavoriteWatch";
 import tw from "tailwind-react-native-classnames";
+import Constant from "../../../../../constant";
 import { MaterialIcons } from "@expo/vector-icons";
 export default function Favorite({
   title,
@@ -10,7 +11,7 @@ export default function Favorite({
   backdrop_path,
 }) {
   const requestConfig = {
-    url: "http://192.168.43.26:8000/favorite/addCreate/",
+    url: `${Constant.url}/favorite/addCreate/`,
     body: JSON.stringify({
       title: title,
       MovieId: MovieId,

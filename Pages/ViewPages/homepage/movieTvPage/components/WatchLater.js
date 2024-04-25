@@ -3,6 +3,7 @@ import { Text, View, Pressable } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import { MaterialIcons } from "@expo/vector-icons";
 import useFavoriteWatch from "../../../viewPagecustomehook/useFavoriteWatch";
+import constant from "../../../../../constant";
 export default function WatchLater({
   title,
   MovieId,
@@ -10,7 +11,7 @@ export default function WatchLater({
   backdrop_path,
 }) {
   const requestConfig = {
-    url: "http://192.168.43.26:8000/watchlater/addCreate/",
+    url: `${constant.url}/watchlater/addCreate/`,
     body: JSON.stringify({
       Movie_id: MovieId,
       title: title,

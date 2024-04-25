@@ -1,0 +1,5 @@
+export default Constant = {
+    url:'http://192.168.43.171:8000',
+    access:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2MjMwMjAwLCJpYXQiOjE3MTQwNzAyMDAsImp0aSI6IjVlOGQ5ZTgwYzAzYTQ4ZjM4YjA4YmYyOWRjZjVjOWFhIiwidXNlcl9pZCI6MTd9.UVSCotb0hCwHPpJ1WnoztmGmfLGaEUTEsA7GOwB2-t0',
+    refresh:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNjY2MjIwMCwiaWF0IjoxNzE0MDcwMjAwLCJqdGkiOiI2MTk4MmFjZGNhNDg0MWY1YWNkMTkxMjViMWMxMjQ0YyIsInVzZXJfaWQiOjE3fQ.ojSC2roY2nV_wospQWouI89QxVoSF5w8qkOwBRn17GM'
+}

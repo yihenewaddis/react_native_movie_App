@@ -10,10 +10,11 @@ import tw from "tailwind-react-native-classnames";
 import useFavoriteWatch from "../../../viewPagecustomehook/useFavoriteWatch";
 import useGetCommentFavorite from "../../../viewPagecustomehook/useGetCommentFavorite";
 import { TextInput } from "react-native-gesture-handler";
+import constant from "../../../../../constant";
 export default function Coments({ title, MovieId }) {
   const [content, setContent] = useState("");
   const requestConfig = {
-    url: "http://192.168.43.26:8000/comment/addCreate/",
+    url: `${constant.url}/comment/addCreate/`,
     body: JSON.stringify({
       title: title,
       movie_id: MovieId,

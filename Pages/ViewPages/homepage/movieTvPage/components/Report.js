@@ -5,6 +5,7 @@ import useFavoriteWatch from "../../../viewPagecustomehook/useFavoriteWatch";
 import { SelectList } from "react-native-dropdown-select-list";
 import { TextInput } from "react-native-gesture-handler";
 import { TouchableOpacity } from "@gorhom/bottom-sheet";
+import constant from "../../../../../constant";
 export default function Report({ title, MovieId, visible, setVisible }) {
   const [selected, setSelected] = useState("not interested");
   const [content, setContent] = useState(null);
@@ -18,7 +19,7 @@ export default function Report({ title, MovieId, visible, setVisible }) {
   ];
 
   const requestConfig = {
-    url: "http://192.168.43.26:8000/report/add/",
+    url: `${constant.url}/report/add/`,
     body: JSON.stringify({
       title: title,
       movie_id: MovieId,

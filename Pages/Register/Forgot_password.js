@@ -24,7 +24,7 @@ export default function Forgot_password (){
       };
       
       axios
-        .post("http://192.168.43.26:8000/auth/users/reset_password/", body, config)
+        .post("http://192.168.137.200:8000/auth/users/reset_password/", body, config)
         .then((response) => {
           Alert.alert("go to your email and reset password");
         })
@@ -73,7 +73,7 @@ export default function Forgot_password (){
 
               <TouchableOpacity style={tw`text-white bg-blue-500  rounded-xl p-2 mx-10`}>
                 <Text style={tw`text-white text-center font-bold`} onPress={handleSubmit}>
-                 Reset Password
+                  Reset Password
                 </Text>
               </TouchableOpacity>
 

@@ -48,7 +48,7 @@ export default function Signup() {
   
   const handle_register = (body) => {
     setPending(true)
-    axios.post("http://192.168.43.26:8000/auth/users/",body,{
+    axios.post("http://192.168.43.171:8000/auth/users/",body,{
       headers: {
         "Content-Type": "application/json",
       }

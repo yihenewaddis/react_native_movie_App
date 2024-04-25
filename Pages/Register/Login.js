@@ -19,7 +19,7 @@ export default function Login() {
   const { navigate } = useNavigation();
   const [LoginData,setLogindata]=useState(null)
   const requestConfig = {
-    url: 'http://192.168.43.26:8000/auth/jwt/create/',
+    url: 'http://192.168.43.171:8000/auth/jwt/create/',
     body: LoginData,
     config: {headers: { "Content-Type": "application/json",}, }
   };
@@ -79,7 +79,7 @@ export default function Login() {
 
               <Pressable style={tw`text-white bg-blue-500 rounded-xl p-2 mx-10`}>
                 <Text style={tw`text-white text-center font-bold`} onPress={handleSubmit}>
-                 {isPending?"Logading":"Log in"}
+                {isPending?"Logading":"Log in"}
                 </Text>
               </Pressable>
               <Text style={tw`text-red-600 mx-10`}>{errorMessage}</Text>

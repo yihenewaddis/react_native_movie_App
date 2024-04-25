@@ -18,6 +18,7 @@ import { useNavigation } from "@react-navigation/native";
 import useGetCommentFavorite from "./viewPagecustomehook/useGetCommentFavorite";
 import { ScrollView } from "react-native-gesture-handler";
 import useDeleteFavoriteWatch from "./viewPagecustomehook/useDeleteFavoriteWatch";
+import Constant from "../../constant";
 export default function My_favorite() {
   const navigation = useNavigation();
 
@@ -32,12 +33,12 @@ export default function My_favorite() {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
   };
 
-  const request = { url: `http://192.168.43.26:8000/${selectedType}/addCreate/` };
+  const request = { url: `${Constant.url}/${selectedType}/addCreate/` };
   const {  data, isLoading } = useGetCommentFavorite(request);
 
 
   const requestconfig = {
-    url: `http://192.168.43.26:8000/${selectedType}/updateDelete/${deleted}/`,
+    url: `${Constant.url}/${selectedType}/updateDelete/${deleted}/`,
   };
 
   const { isPending, removed, deleteFvorite } = useDeleteFavoriteWatch(requestconfig);
