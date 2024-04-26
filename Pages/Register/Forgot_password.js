@@ -7,6 +7,7 @@ import { Formik } from "formik";
 import * as yup from 'yup'
 import { useState } from "react";
 import axios from "axios";
+import constant from '../../constant'
 axios
 const LoginSchema=yup.object({
   email:yup.string()
@@ -24,7 +25,7 @@ export default function Forgot_password (){
       };
       
       axios
-        .post("http://192.168.137.200:8000/auth/users/reset_password/", body, config)
+        .post(`${constant.url}/auth/users/reset_password/`, body, config)
         .then((response) => {
           Alert.alert("go to your email and reset password");
         })

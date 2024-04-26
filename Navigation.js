@@ -280,13 +280,13 @@ import TopRated from './Pages/ViewPages/homepage/tvPage/TopRated'
           }}/>
         ),
       }}/>
-      <Drawer.Screen
+      {/* <Drawer.Screen
       name="Payment action"
       component={Payment}
       options={{
         drawerIcon: ({ color }) => (
           <MaterialIcons name="payment" size={24} color={color} />
-        ),}}/>
+        ),}}/> */}
       <Drawer.Screen
       name="App feedback"
       component={App_feedback}
