@@ -13,6 +13,7 @@ import tw from "tailwind-react-native-classnames";
 import { useNavigation } from "@react-navigation/native";
 import { Formik } from "formik";
 import * as yup from 'yup'
+import constant from "../../constant";
 import axios from "axios";
 const SignupSchema = yup.object({
       email:yup.string()
@@ -48,7 +49,7 @@ export default function Signup() {
   
   const handle_register = (body) => {
     setPending(true)
-    axios.post("http://192.168.43.171:8000/auth/users/",body,{
+    axios.post(`${constant.url}/auth/users/`,body,{
       headers: {
         "Content-Type": "application/json",
       }

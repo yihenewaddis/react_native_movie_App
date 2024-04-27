@@ -5,6 +5,7 @@ import tw from "tailwind-react-native-classnames";
 import { useNavigation } from "@react-navigation/native";
 import { Formik } from "formik";
 import * as yup from 'yup'
+import constant from '../../constant'
 import useRegisterHook from "./RegisterCustomeHook/useRegisterHook";
 const LoginSchema=yup.object({
   email:yup.string()
@@ -19,7 +20,7 @@ export default function Login() {
   const { navigate } = useNavigation();
   const [LoginData,setLogindata]=useState(null)
   const requestConfig = {
-    url: 'http://192.168.43.171:8000/auth/jwt/create/',
+    url: `${constant.url}/auth/jwt/create/`,
     body: LoginData,
     config: {headers: { "Content-Type": "application/json",}, }
   };

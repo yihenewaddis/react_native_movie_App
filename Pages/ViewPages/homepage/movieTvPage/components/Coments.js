@@ -24,7 +24,7 @@ export default function Coments({ title, MovieId }) {
   };
 
   const request = {
-    url: `http://192.168.43.26:8000/comment/list/${MovieId}/`,
+    url: `${constant.url}/comment/list/${MovieId}/`,
   };
   const handleTextChange = (text) => {
     setContent(text);
